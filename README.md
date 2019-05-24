@@ -38,12 +38,13 @@
 - `graphql-import` for type defs with `.graphql` SDL files
 - `eslint` for linting with the AirBnB and Prettier rules
   - add the `eslint` and `prettier` extensions in vscode to make use of these during development
-- `nodemon` for local development (auto restarts on change). includes custom config so it watches your `.graphql` SDL files for changes as well
+- `nodemon` for local development (auto restarts on change)
+  - includes custom config so it watches your `.graphql` SDL files for changes as well
 - GraphQL scalars from [@okgrow/graphql-scalars](https://www.npmjs.com/package/@okgrow/graphql-scalars)
   - boilerplate includes Email, URL, and DateTime
   - add additional scalar defs to the `src/api/type-defs/scalars.graphql` file
   - add additional scalar resolvers to the `src/api/resolvers/scalars.js` file
-- winston logger from [@vampiire/node-logger](https://www.npmjs.com/package/@vampiire/node-logger)
+- pre-configured winston logger from [@vampiire/node-logger](https://www.npmjs.com/package/@vampiire/node-logger)
   - colorized console logging during development
   - writes rotating log files during production
 
@@ -84,7 +85,7 @@ COMBINED_LOGS_DIR=logs/combined
 
 - start production with `npm start` (dont forget your env vars)
 - run tests with `npm test` (runs linter and jest tests)
-- start dev mode with `npm run dev` (watches and reloads)
+- start dev mode with `npm run dev` (loads `.env` then watches and reloads on change)
 
 ## customize
 
@@ -95,3 +96,4 @@ COMBINED_LOGS_DIR=logs/combined
 - add and export your database models in `src/db/models`
 - customize the API `context` in `src/index.js` but do not modify anything else (it is all wired up)
 - override eslint rules in `package.json` `eslintConfig.rules` section
+- customize the logger see options at [@vampiire/node-logger](https://www.npmjs.com/package/@vampiire/node-logger)
