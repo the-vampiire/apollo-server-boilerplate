@@ -15,4 +15,4 @@ const server = new ApolloServer({
   },
 });
 
-server.listen(process.env.PORT || 8008);
+server.listen(process.env.PORT);

@@ -5,7 +5,7 @@
 	"main": "server",
 	"scripts": {
 		"start": "node server",
-		"dev": "nodemon",
+		"dev": "env $(cat .env) nodemon",
 		"test:lint": "eslint .",
 		"test:jest": "jest",
 		"test": "npm run test:lint && npm run test:jest"
