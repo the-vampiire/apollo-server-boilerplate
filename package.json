@@ -1,7 +1,7 @@
 {
-  "name": "pg-public-api",
+  "name": "apollo-server-boilerplate",
   "version": "1.0.0",
-  "description": "public graphql API",
+  "description": "fully wirted apollo server boilerplate",
   "main": "src",
   "scripts": {
     "start": "node src",
@@ -11,7 +11,7 @@
     "test": "npm run test:lint && npm run test:jest"
   },
   "author": "vampiire",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "@okgrow/graphql-scalars": "^0.4.5",
     "@vampiire/node-logger": "^0.1.4",
