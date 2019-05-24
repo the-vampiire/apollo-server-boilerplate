@@ -1,51 +1,56 @@
 {
-	"name": "pg-public-api",
-	"version": "1.0.0",
-	"description": "public graphql API",
-	"main": "server",
-	"scripts": {
-		"start": "node server",
-		"dev": "env $(cat .env) nodemon",
-		"test:lint": "eslint .",
-		"test:jest": "jest",
-		"test": "npm run test:lint && npm run test:jest"
-	},
-	"author": "vampiire",
-	"license": "UNLICENSED",
-	"dependencies": {
-		"@okgrow/graphql-scalars": "^0.4.5",
-		"apollo-server": "^2.5.0",
-		"graphql": "^14.3.1",
-		"graphql-import": "^0.7.1"
-	},
-	"devDependencies": {
-		"eslint": "^5.16.0",
-		"eslint-config-airbnb-base": "^13.1.0",
-		"eslint-plugin-import": "^2.17.2",
-		"jest": "^24.8.0",
-		"nodemon": "^1.19.0"
-	},
-	"eslintConfig": {
-		"env": {
-			"es6": true,
-			"commonjs": true
-		},
-		"extends": "airbnb-base",
-		"globals": {
-			"Atomics": "readonly",
-			"SharedArrayBuffer": "readonly"
-		},
-		"parserOptions": {
-			"ecmaVersion": 2018
-		},
-		"rules": {
-			"quotes": [
-				"error",
-				"double"
-			]
-		}
-	},
-	"nodemonConfig": {
-		"ext": "graphql"
-	}
+  "name": "pg-public-api",
+  "version": "1.0.0",
+  "description": "public graphql API",
+  "main": "src",
+  "scripts": {
+    "start": "node src",
+    "dev": "env $(cat .env) nodemon",
+    "test:lint": "eslint .",
+    "test:jest": "jest",
+    "test": "npm run test:lint && npm run test:jest"
+  },
+  "author": "vampiire",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@okgrow/graphql-scalars": "^0.4.5",
+    "@vampiire/node-logger": "^0.1.4",
+    "apollo-server": "^2.5.0",
+    "graphql": "^14.3.1",
+    "graphql-import": "^0.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "commonjs": true
+    },
+    "extends": [
+      "prettier",
+      "airbnb-base"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "quotes": [
+        "error",
+        "double"
+      ]
+    }
+  },
+  "nodemonConfig": {
+    "ext": "graphql, js"
+  }
 }
