@@ -24,10 +24,12 @@
       type-defs/
         index.js <-- bundles and exports all type defs, dont modify
         index.graphql <-- bundles and exports all SDL type defs, dont modify
-        mutations.js <-- define mutations
-        queries.js <-- define queries
-        scalars.js <-- define additional scalars
-        types.js <-- define types
+        mutations.graphql <-- define mutations
+        queries.graphql <-- define queries
+        scalars.graphql <-- define additional scalars
+        enums.graphql <-- define enums
+        inputs.graphql <-- define inputs
+        types.graphql <-- define types
 ```
 
 ## includes
