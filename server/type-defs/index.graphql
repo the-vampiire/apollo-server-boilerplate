@@ -1,4 +1,6 @@
 # import * from './types.graphql'
 # import * from './enums.graphql'
+# import * from './inputs.graphql'
+# import * from './scalars.graphql'
 # import Query.* from './queries.graphql'
 # import Mutation.* from './mutations.graphql'
