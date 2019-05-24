@@ -1,9 +1,9 @@
 const { ApolloServer } = require("apollo-server");
 const logger = require("@vampiire/node-logger")();
 
-const { models } = require("../db");
-const typeDefs = require("./type-defs");
-const resolvers = require("./resolvers");
+const { models } = require("./db");
+const typeDefs = require("./api/type-defs");
+const resolvers = require("./api/resolvers");
 
 const server = new ApolloServer({
   resolvers,
