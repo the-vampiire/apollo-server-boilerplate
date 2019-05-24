@@ -1,3 +1,5 @@
 module.exports = {
-  Mutation: {},
+  Mutation: {
+    // add mutation resolvers here
+  },
 };

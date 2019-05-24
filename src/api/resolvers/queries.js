@@ -1,3 +1,5 @@
 module.exports = {
-  Query: {},
+  Query: {
+    // add query resolvers here
+  },
 };
